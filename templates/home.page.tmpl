@@ -1,14 +1,121 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <title>Barber Shop</title>
+  <style>
+    body {
+      background-color: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      color: white;
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+      color: white;
+    }
+
+    .button {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: gray;
+    }
+
+    .hamburger-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+
+    .hamburger-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hamburger-menu li {
+      cursor: pointer;
+    }
+
+    .hamburger-menu li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    .hamburger-menu li a:hover {
+      background-color: gray;
+    }
+
+    .hamburger-menu-icon {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .hamburger-menu-icon:hover {
+      background-color: gray;
+    }
+
+    .hamburger-menu-icon .bar {
+      width: 30px;
+      height: 5px;
+      margin: 5px auto;
+      background-color: white;
+    }
+  </style>
 </head>
-<body>
-<h1>This is the home page</h1>
-<p>This is some text</p>
+<body bgcolor=black>
+  <div class="hamburger-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Book</a></li>
+      <li><a href="#">Social</a></li>
+    </ul>
+  </div>
+
+  <div class="hamburger-menu-icon">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="content">
+    <h1>Barber Shop</h1>
+    <p>Get the best haircut in town at our barber shop!</p>
+    <p>Our experienced barbers will give you the look you want, whether you're going for a classic cut or something more trendy.</p>
+    <p>We also offer a variety of other services, such as beard trims, shaves, and hair coloring.</p>
+    <p>Make an appointment today!</p>
+    <a href="tel:1-555-555-5555" class="button">Book Now</a>
+  </div>
+
+  <script>
+    const hamburgerMenuIcon = document.querySelector('.hamburger-menu-icon');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+    hamburgerMenuIcon.addEventListener('click', () => {
+      hamburgerMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
